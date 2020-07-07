@@ -11,6 +11,8 @@ services:
       - DOMAIN=${DOMAIN}
     networks:
       - ssl-test-network
+    extra_hosts:
+      - "${DOMAIN}:127.0.0.1"
     restart: unless-stopped
 
 networks:
